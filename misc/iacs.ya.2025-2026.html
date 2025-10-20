@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>IACS Youth Advocacy Calendar 2025-2026</title>
+<style>
+    body { 
+        font-family: Arial, sans-serif; line-height: 1.6;
+        background-color: wheat;
+        padding: 20px; 
+    }
+    h1 { color: #333; }
+    ul { list-style-type: none; padding: 0; }
+    li { margin-bottom: 20px; border-bottom: 1px dashed #ddd; padding-bottom: 15px; }
+    a { 
+        display: inline-block; 
+        padding: 8px 15px; 
+        background-color: #007aff; /* Apple Blue */
+        color: white; 
+        text-decoration: none; 
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 5px;
+        transition: background-color 0.2s;
+    }
+    a:hover { background-color: #005bb5; }
+    .warning { color: purple}
+    .event-details { font-size: 0.9em; color: #555; margin-top: 5px; }
+    .mandatory { color: #d9534f; font-weight: bold; }
+    .signature { color: green}
+</style>
+</head>
+<body>
+
+<h1>IACS Youth Advocacy Calendar 2025-2026</h1>
+<p>Click to Add Events to Apple Calendar</p>
+<!-- 📅 -->
+
+<ul id="event-list">
+    </ul>
+
+<hr>
+
+<h2 class="warning">Events Omitted Due to Vague Scheduling</h2>
+<p>The following items were too vague to create a valid calendar shortcut and were excluded from the data array:</p>
+<ul>
+    <li>**Legislative Day- TBD** (Needs a specific date and time in Mid February 2026).</li>
+    <li>**Weekly zoom meetings** (Needs a specific day/time/duration for recurrence).</li>
+    <li>**YAs attending camp plan a camp workshop...** (General task, not an event).</li>
+    <li>**All YA's / YA's projects/community projects** (General activities).</li>
+</ul>
+
+<hr/>
+<h3>Credits</h2>
+    <ul>
+        <li>IACS Youth Advocacy Leadership Group</li>
+    </ul>
+    <ul>
+        <li>Calendar page created using <b>Gemini</b> by <span class="signature" href="mailto:muralirk@gmail.com">Murali Krishnan</a></li>
+    </ul>
+<script>
+// --- 1. EMBEDDED JSON DATA ---
+const events = [
+    // Note: 2025-10-18 is in the past, but included for completeness.
+    {
+        date: "2025-10-18", timeStart: "13:00:00", timeEnd: "15:30:00", 
+        summary: "YA First meeting with parents attending Last 45 minutes", 
+        location: "TBD", fileNameSuffix: "ya-first-meeting"
+    },
+    {
+        date: "2025-10-26", timeStart: "10:00:00", timeEnd: "12:00:00", 
+        summary: "First Restoration Project with YB", 
+        location: "McAuliffe Park Kirkland", fileNameSuffix: "restoration-project"
+    },
+    {
+        date: "2025-11-02", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting and Advocacy Workshop-Mandatory", 
+        location: "Together Center, Redmond", fileNameSuffix: "advocacy-workshop"
+    },
+    {
+        date: "2025-11-16", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting and Officers Elections", 
+        location: "Together Center, Redmond", fileNameSuffix: "officers-elections"
+    },
+    {
+        date: "2025-12-07", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting and MH Counselor Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "mh-counselor-meeting"
+    },
+    {
+        date: "2025-12-14", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly meeting/Holiday Dive Project TBD", 
+        location: "TBD", fileNameSuffix: "holiday-dive"
+    },
+    {
+        date: "2026-01-11", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "jan-meeting"
+    },
+    {
+        date: "2026-01-25", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "jan-meeting-2"
+    },
+    {
+        date: "2026-02-08", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "TBD", fileNameSuffix: "feb-meeting"
+    },
+    {
+        date: "2026-02-22", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting/ MH panel by YAs for YCs", 
+        location: "Together Center, Redmond", fileNameSuffix: "mh-panel"
+    },
+    {
+        date: "2026-03-08", timeStart: "09:00:00", timeEnd: "14:00:00", // 9:00am-2:00pm
+        summary: "YB/YA Peer MH Workshop/ First Aid/NARCAN training-Mandatory", 
+        location: "Together Center, Redmond", fileNameSuffix: "mh-workshop-training"
+    },
+    {
+        date: "2026-03-22", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "TBD", fileNameSuffix: "mar-meeting"
+    },
+    {
+        date: "2026-04-05", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "apr-meeting"
+    },
+    {
+        date: "2026-04-19", timeStart: "10:00:00", timeEnd: "12:00:00", 
+        summary: "Adopt-a-Street Earth Month Project", 
+        location: "Miller Community Center Seattle", fileNameSuffix: "adopt-a-street"
+    },
+    {
+        date: "2026-05-03", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "may-meeting"
+    },
+    {
+        date: "2026-05-17", timeStart: "10:00:00", timeEnd: "12:30:00", 
+        summary: "YA Monthly Meeting", 
+        location: "Together Center, Redmond", fileNameSuffix: "may-meeting-2"
+    },
+    {
+        date: "2026-05-31", timeStart: "13:45:00", timeEnd: "16:00:00", // 1:45PM-4:00PM
+        summary: "Youth Safety Workshop (min 1 parent to attend as well)-Mandatory", 
+        location: "North Bellevue Community Center", fileNameSuffix: "youth-safety-workshop"
+    },
+    // Multi-day/Tentative events using specific date formats
+    {
+        date: "2026-05-30", timeStart: "09:00:00", timeEnd: "09:00:00", // All-day placeholder start
+        endDate: "2026-06-01", isAllDay: true, 
+        summary: "YA Retreat - Mandatory (TENTATIVE START: May 30 - June 7)", 
+        location: "TBD", fileNameSuffix: "ya-retreat", 
+        description: "Event is 5/30-5/31 or 6/6-6/7. Please check for final date."
+    },
+    {
+        date: "2026-06-20", timeStart: "09:00:00", timeEnd: "18:00:00", 
+        summary: "CIVIC SUMMIT - Mandatory (Date could change)", 
+        location: "TBD", fileNameSuffix: "civic-summit", 
+        description: "Date could change depending on availability of elected officials."
+    },
+    {
+        date: "2026-08-11", timeStart: "11:45:00", timeEnd: "14:00:00", 
+        endDate: "2026-08-15", 
+        summary: "CAMP BHARAT", 
+        location: "TBD", fileNameSuffix: "camp-bharat"
+    }
+];
+
+// --- 2. JAVASCRIPT LOGIC ---
+
+/**
+ * Encodes a string for URL use, specifically handling iCalendar line breaks (%0A).
+ * @param {string} str The string to encode.
+ */
+function encodeIcsString(str) {
+    // Replace double quotes and newlines with their URL-encoded equivalents
+    return encodeURIComponent(str).replace(/%20/g, ' ').replace(/%0A/g, '\n');
+}
+
+/**
+ * Formats a date/time string for iCalendar (YYYYMMDDTHHMMSS).
+ * @param {string} date The date string (YYYY-MM-DD).
+ * @param {string} time The time string (HH:MM:SS).
+ */
+function formatIcsDateTime(date, time) {
+    return date.replace(/-/g, '') + 'T' + time.replace(/:/g, '');
+}
+
+/**
+ * Creates the iCalendar data content.
+ * @param {Object} event The event object from the JSON data.
+ */
+function createIcsContent(event) {
+    const startDT = formatIcsDateTime(event.date, event.timeStart);
+    const endDT = event.endDate 
+        ? formatIcsDateTime(event.endDate, event.timeEnd) 
+        : formatIcsDateTime(event.date, event.timeEnd);
+    
+    // Use DTEND;VALUE=DATE:YYYYMMDD for multi-day all-day events
+    const dtEndProperty = event.isAllDay 
+        ? `DTEND;VALUE=DATE:${event.endDate.replace(/-/g, '')}` 
+        : `DTEND:${endDT}`;
+
+    const uid = startDT + '-' + event.fileNameSuffix;
+    const summary = encodeIcsString(event.summary);
+    const location = encodeIcsString(event.location);
+    const description = event.description ? `DESCRIPTION:${encodeIcsString(event.description)}%0A` : '';
+
+    let ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//MyCustomApp//NONSGML V1.0//EN',
+        'BEGIN:VEVENT',
+        `UID:${uid}`,
+        `DTSTAMP:${startDT}`,
+        `DTSTART:${startDT}`,
+        dtEndProperty,
+        `SUMMARY:${summary}`,
+        `LOCATION:${location}`
+    ];
+
+    if (description) {
+        ics.push(description.trim());
+    }
+
+    ics.push('END:VEVENT', 'END:VCALENDAR');
+
+    // Join with URL-encoded line breaks (%0A)
+    return ics.join('%0A');
+}
+
+/**
+ * Renders the event list to the DOM.
+ */
+function renderEvents() {
+    const listElement = document.getElementById('event-list');
+    
+    events.forEach(event => {
+        const icsContent = createIcsContent(event);
+        const dataUrl = 'data:text/calendar;charset=utf8,' + icsContent;
+        
+        // Format for display
+        const startDateDisplay = new Date(event.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', weekday: 'short' });
+        const timeDisplay = `${event.timeStart.substring(0, 5)} - ${event.timeEnd.substring(0, 5)}`;
+        const dateRange = event.endDate ? ` (${startDateDisplay} to ${new Date(event.endDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric'})})` : ` | ${startDateDisplay}`;
+        
+        // Custom filename: YYYY-MM-DD-suffix.ics
+        const filename = `${event.date}-${event.fileNameSuffix}.ics`;
+        const isMandatory = event.summary.toLowerCase().includes("mandatory");
+
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `
+            <strong>${event.summary.replace('-Mandatory', '').trim()}</strong>
+            <span class="${isMandatory ? 'mandatory' : ''}">${isMandatory ? ' (Mandatory)' : ''}</span>
+            <div class="event-details">
+                ${dateRange} | ${timeDisplay} | Location: ${event.location}
+            </div>
+            <a href="${dataUrl}" download="${filename}">Add to Calendar (.ics)</a>
+        `;
+        listElement.appendChild(listItem);
+    });
+}
+
+// Execute the rendering function when the page loads
+document.addEventListener('DOMContentLoaded', renderEvents);
+</script>
+</body>
+</html>
